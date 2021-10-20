@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class FirstTest {
     private FrameFixture frame;
 
@@ -28,6 +30,7 @@ public class FirstTest {
     @Test
     public void shouldCopyTextInLabelWhenClickingButton() {
         frame.button().click();
+        assertEquals("Clicked" ,frame.button().text());
     }
 
     @AfterEach
